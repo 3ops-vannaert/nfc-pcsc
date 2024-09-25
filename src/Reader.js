@@ -67,14 +67,15 @@ class Reader extends EventEmitter {
 	}
 
 	static selectStandardByAtr(atr) {
-
+        //always return TAG_ISO_14443_3
+		return TAG_ISO_14443_3;
 		// TODO: better detecting card types
-		if (atr[5] && atr[5] === 0x4f) {
-			return TAG_ISO_14443_3;
-		}
-		else {
-			return TAG_ISO_14443_4;
-		}
+		//if (atr[5] && atr[5] === 0x4f) {
+		//	return TAG_ISO_14443_3;
+		//}
+		//else {
+		//	return TAG_ISO_14443_4;
+		//}
 
 	}
 
